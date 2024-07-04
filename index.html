@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-full bg-violet-500 flex justify-between items-center py-2 px-8">
+        <div class="w-1/2">
+            <h1 class="text-2xl text-white">To Do List App</h1>
+        </div>
+        <div class="w-1/2 flex justify-end items-center">
+            <div class="h-50 mx-2">
+                <div class="text-md text-end text-white" id="userName">Name</div>
+                <h1 class="text-md text-end text-gray-300" id="userJobTitle">JobTitle</h1>
+            </div>
+            <div class="h-50">
+                <button id="profile"><img class="h-50 w-50 rounded-full" src="https://via.placeholder.com/40/ffffff" alt=""></button>
+            </div>
+        </div>
+    </div>
+    <div class="w-full items-center pt-4 px-8">
+        <div class="flex justify-center items-center mb-3 md:justify-start">
+            <h1 class="text-xl">Add New List</h1>
+        </div>
+        <div class="flex items-center">
+            <div class="w-1/2 flex flex-col mb-3 me-3 md:w-1/4">
+                <label for="description">Date</label>
+                <input class="border-2 px-2 rounded-md w-full h-10" type="date" id="toDoDate">
+            </div>
+            <div class="w-1/2 flex flex-col mb-3 md:w-1/4">
+                <label for="description">Priority</label>
+                <select class="border-2 px-2 rounded-md w-full h-10" name="priority" id="toDoPriority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="description">Description</label>
+            <textarea class="border-2 p-2 rounded-md w-full" placeholder="Enter To Do Description" name="description" id="toDoDesc" required></textarea>
+        </div>
+        <div class="flex justify-center">
+            <button class="bg-blue-500 hover:bg-blue-700 text-md text-white py-1 px-4 rounded" id="toDoSubmitBtn">Submit</button>
+        </div>
+    </div>
+    <div class="w-full items-center py-4 px-8">
+        <div class="flex items-center mb-3">
+            <div class="w-full flex justify-between">
+                <h1 class="text-xl">To Do List</h1>
+                <button class="bg-red-500 hover:bg-red-700 text-md text-white py-1 px-4 rounded" id="toDoDeleteAllBtn">Delete All</button>
+            </div>
+        </div>
+        <div class="flex justify-center items-center mb-3">
+            <div class="flex justify-center w-1/3 flex border-b-2" id="toDoViewAll">
+                <button class="text-lg text-gray-500 hover:text-blue-500">All Task To Do</button>
+            </div>
+
+            <div class="flex justify-center w-1/3 flex border-b-2" id="toDoViewDone">
+                <button class="text-lg text-gray-500 hover:text-blue-500">Task Done</button>
+            </div>
+            <div class="flex justify-center w-1/3 flex border-b-2" id="toDoViewOverdue">
+                <button class="text-lg text-gray-500 hover:text-blue-500">Task Overdue</button>
+            </div>
+        </div>
+        <div class="overflow-scroll" id="toDoList" style="height: 32vh;">
+        </div>
+    </div>
+    <div class="h-16 w-full flex flex-col bg-gray-700">
+        <div class="h-full flex justify-center items-center">
+            <p class="text-md text-white">Created By @RaymondJohnson02</p>
+        </div>
+    </div>
+        <!-- profile
+
+All
+Task In Progress
+Task Done
+
+Task
+Description
+Hari dan Tanggal
+Prioritas [low, medium, high]
+Done [true, false] checkbox
+Submit -->
+
+</body>
+<script src="index.js"></script>
+</html>
